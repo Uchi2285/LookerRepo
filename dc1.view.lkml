@@ -1,4 +1,4 @@
-view: dc {
+view: dc1 {
   sql_table_name: PUBLIC.DISTRIBUTION_CENTERS ;;
 
   dimension: dcid {
