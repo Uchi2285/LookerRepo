@@ -19,3 +19,11 @@ include: "*.view.lkml"                       # include all views in this project
 # }
 explore: etl_jobs {}
 explore:distribution_centers {}
+
+explore: products {
+  join: distribution_centers {
+    type: left_outer
+    sql_on: ${products.distribution_center_id} = ${distribution_centers.id} ;;
+    relationship: many_to_one
+  }
+}
