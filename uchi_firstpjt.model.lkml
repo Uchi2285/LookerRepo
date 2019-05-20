@@ -12,6 +12,8 @@ persist_with: uchi_firstpjt_default_datagroup
 
 explore: distribution_centers {}
 
+explore: dc1 {}
+
 explore: etl_jobs {}
 
 explore: events {
