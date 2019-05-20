@@ -1,30 +1,30 @@
 view: dc {
   sql_table_name: PUBLIC.DISTRIBUTION_CENTERS ;;
 
-  dimension: id {
+  dimension: dcid {
     primary_key: yes
     type: number
     sql: ${TABLE}."ID" ;;
     }
 
-  dimension: latitude {
+  dimension: dclatitude {
     type: number
     sql: ${TABLE}."LATITUDE" ;;
   }
 
-  dimension: longitude {
+  dimension: dclongitude {
     type: number
     sql: ${TABLE}."LONGITUDE" ;;
   }
 
-  dimension: name {
+  dimension: dcname {
     type: string
     sql: ${TABLE}."NAME" ;;
   }
 
-  measure: count {
+  measure: dccount {
     type: count
-    drill_fields: [id, name, products.count]
+    drill_fields: [dcid, dcname, products.count]
   }
 
   measure: total_cnt {
@@ -33,7 +33,7 @@ view: dc {
   }
 
   set: dc_set {
-    fields: [id,latitude,longitude,name]
+    fields: [dcid,dclatitude,dclongitude,dcname]
   }
 
  }
