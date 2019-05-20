@@ -27,7 +27,7 @@ view: dc1 {
     drill_fields: [dcid, dcname, products.count]
   }
 
-    set: dc_set {
+    set: dcset {
     fields: [dcid,dclatitude,dclongitude,dcname]
   }
 
