@@ -1,7 +1,7 @@
 connection: "thelook"
 
 # include all the views
-include: "*.view"
+include: "*.view.lkml"
 
 datagroup: uchi_firstpjt_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
