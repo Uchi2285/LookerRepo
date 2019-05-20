@@ -27,12 +27,7 @@ view: dc {
     drill_fields: [dcid, dcname, products.count]
   }
 
-  measure: total_cnt {
-    type: sum
-    sql: ${products.count} ;;
-  }
-
-  set: dc_set {
+    set: dc_set {
     fields: [dcid,dclatitude,dclongitude,dcname]
   }
 
